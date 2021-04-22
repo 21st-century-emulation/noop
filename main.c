@@ -43,6 +43,8 @@ free_cpu:
         mg_http_reply(c, 400, "", "");
       }
       cJSON_Delete(cpu);
+    } else if (mg_http_match_uri(hm, "/status")) {
+      mg_http_reply(c, 200, "", "Healthy");
     } else {
       mg_http_reply(c, 404, "", "");
     }
