@@ -1,7 +1,7 @@
 #include "cJSON.h"
 #include "mongoose.h"
 
-static const char *s_listening_address = "tcp://0.0.0.0:1234";
+static const char *s_listening_address = "tcp://0.0.0.0:8080";
 
 static void listen_fn(struct mg_connection *c, int ev, void *ev_data, void *fn_data) {
   if (ev == MG_EV_HTTP_MSG) {
